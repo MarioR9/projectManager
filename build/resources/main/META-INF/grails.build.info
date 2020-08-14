@@ -1,6 +1,0 @@
-#Thu, 13 Aug 2020 18:45:50 -0400
-
-info.app.version=0.1
-info.app.name=projectManager
-grails.env=development
-info.app.grailsVersion=4.0.4
