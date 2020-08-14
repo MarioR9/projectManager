@@ -8,5 +8,6 @@ class Project {
     String endDate
     
     static constraints = {
+        //add restrictions
     }
 }
