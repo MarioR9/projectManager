@@ -2,7 +2,7 @@
 grails:
     profile: rest-api
     codegen:
-        defaultPackage: projectmanager
+        defaultPackage: pm.api
     gorm:
         reactor:
             # Whether to translate GORM events into Reactor events

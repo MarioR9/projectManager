@@ -1,4 +1,4 @@
-package projectmanager
+package pm.api
 
 import grails.core.GrailsApplication
 import grails.plugins.*

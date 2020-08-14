@@ -1,4 +1,4 @@
-package projectmanager
+package pm.api
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

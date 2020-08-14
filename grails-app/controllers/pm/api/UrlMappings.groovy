@@ -1,4 +1,4 @@
-package projectmanager
+package pm.api
 
 class UrlMappings {
 
