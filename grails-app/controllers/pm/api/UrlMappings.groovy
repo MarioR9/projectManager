@@ -4,10 +4,9 @@ class UrlMappings {
 
     static mappings = {
         
-        "/api/projects"(controller: 'project', action:'index')
+@       @Resource(uri="/api/projects")
 
-
-        "/"(controller: 'application', action:'index')
+        "/"(controller: 'application', action: 'index')
 
         "500"(view: '/error')
         "404"(view: '/notFound')
