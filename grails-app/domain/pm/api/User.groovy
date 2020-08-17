@@ -4,7 +4,7 @@ class User {
 
     String name
     String bio
-    Integer projetcs
+    Integer projects
 
     static constraints = {
         name blank:false
