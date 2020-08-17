@@ -6,6 +6,8 @@ class Project {
     String description
     String startDate
     String endDate
+    Integer collaborators
+    String githubLink
     
     static constraints = {
         //add restrictions
