@@ -9,6 +9,9 @@ class Project {
     Integer collaborators
     String githubLink
     
+    static belongsTo = [
+        user: User
+    ]
     static constraints = {
         //add restrictions
         name blank:false
