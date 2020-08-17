@@ -5,3 +5,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/MarioR9/projectManager?color=g&label=Repo%20Size)&nbsp; 
 ![GitHub last commit](https://img.shields.io/github/last-commit/MarioR9/projectManager)
  
+## General Information
+
+project manager is a tool that will help developer collaborate and plan projects.
