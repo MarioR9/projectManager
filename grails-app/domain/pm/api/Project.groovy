@@ -11,5 +11,6 @@ class Project {
     
     static constraints = {
         //add restrictions
+        name blank:false
     }
 }

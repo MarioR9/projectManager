@@ -7,7 +7,8 @@ import grails.converters.*
 class ProjectController {
 	static responseFormats = ['json', 'xml']
 	
-    def index() { 
-       response(Project.list())
+    def index(Integer max) { 
+       params.max = Math.min(max ?: 10, 100)
+       respond Project.list(params)
     }
 }

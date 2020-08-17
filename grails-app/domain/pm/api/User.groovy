@@ -7,5 +7,6 @@ class User {
     Integer projetcs
 
     static constraints = {
+        name blank:false
     }
 }

@@ -4,8 +4,8 @@ class UrlMappings {
 
     static mappings = {
 
-        "/api/projects"(controller: 'project', action: 'index')
-        
+        "/api/projects"(resources: 'project')
+
         "/"(controller: 'application', action: 'index')
 
         "500"(view: '/error')
