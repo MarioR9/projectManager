@@ -6,7 +6,6 @@ class Project {
     String description
     String startDate
     String endDate
-    Integer collaborators
     String githubLink
     
     static belongsTo = [
@@ -15,5 +14,6 @@ class Project {
     static constraints = {
         //add restrictions
         name blank:false
+        description size: 2..15000
     }
 }
