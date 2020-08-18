@@ -11,4 +11,6 @@ class UserController {
        params.max = Math.min(max ?: 10, 100)
        respond User.list(params)
     }
+    
+   
 }
