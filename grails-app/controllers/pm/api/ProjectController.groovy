@@ -12,13 +12,25 @@ class ProjectController {
        respond Project.list(params)
     }
     def show(Long id){
-      respond User.get(id)
+      respond Project.get(id)
     }
     def create() {
       respond new Project(params)
     }
-    def delete(Long id)) {
-      p = Project.get(id)
-      p.delete()
+    def save(){
+      println("here are the params: " + params)
+      println(Project.all)
+      def project = new Project(params)
+        project.save 
     }
+  
+      def delete() {
+        println("here are the params: " + params.id)
+        def project = Project.get(params.id)
+        project.delete
+        response {objc: "deleteded"}
+        
+    }
+
+
 }

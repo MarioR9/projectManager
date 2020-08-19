@@ -35,7 +35,7 @@ class BootStrap {
 
         new User(
          name: "Mario R",
-         bio: "Come from nothing to create something great in change the world!",
+         bio: "Come from nothing to create something great and change the world!",
          github: "https://github.com/MarioR9",
          projects: 4).save() 
         
