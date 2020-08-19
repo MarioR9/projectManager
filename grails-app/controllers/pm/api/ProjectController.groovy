@@ -1,5 +1,8 @@
 package pm.api
 
+import grails.gorm.transactions.*
+import static org.springframework.http.HttpStatus.*
+import static org.springframework.http.HttpMethod.*
 
 import grails.rest.*
 import grails.converters.*
@@ -15,22 +18,22 @@ class ProjectController {
       respond Project.get(id)
     }
     def create() {
-      respond new Project(params)
-    }
-    def save(){
-      println("here are the params: " + params)
-      println(Project.all)
-      def project = new Project(params)
-        project.save 
+      def newproject = new Project(params)
+        newproject.save(flush: true)
     }
   
-      def delete() {
-        println("here are the params: " + params.id)
-        def project = Project.get(params.id)
-        project.delete
-        response {objc: "deleteded"}
+@Transactional
+def save(Project project) {
+  project = new Project(params) 
+  project.save flush:true
+    
+}
+
+  def delete() {
+    def project = Project.get(params.id)
+    project.delete(flush: true)
         
-    }
+  }
 
 
 }
