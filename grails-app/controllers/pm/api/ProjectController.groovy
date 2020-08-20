@@ -33,7 +33,7 @@ class ProjectController {
  
     def save(Project project) {
         projectService.save(project)
-        respond Project.list(params)
+        respond Project.list()
     }
  
     def delete(Long id) {
