@@ -13,32 +13,31 @@ import grails.converters.*
 class ProjectController {
 	static responseFormats = ['json', 'xml']
 
-  static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
   
-   def index(Integer max) {
+    
+    def projectService
+
+    def index(Integer max) {
        params.max = Math.min(max ?: 10, 100)
        respond Project.list(params)
     }
-    
-    def show() {
-        respond projectService.single(params)
+ 
+    def show(Long id) {
+        respond projectService.get(id)
     }
-
-    
-    def save() {
-        def project = projectService.save(params)
-        respond project
+ 
+    def create() {
+        respond new Project(params)
     }
-
-    
-    def update() {
-        def project = projectService.update(params)
-        respond project
+ 
+    def save(Project project) {
+        projectService.save(project)
+        respond Project.list(params)
     }
-
-    
-    def delete() {
-        def project = projectService.delete(params)
-        respond project
+ 
+    def delete(Long id) {
+        projectService.delete(id)
+        respond Project.list(params)
     }
 }
