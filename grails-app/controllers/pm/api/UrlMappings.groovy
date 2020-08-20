@@ -4,7 +4,14 @@ class UrlMappings {
 
     static mappings = {
 
-        "/api/projects"(resources: 'project')
+        "/api/projects"(controller: "project", action: "index", method:"GET")
+        "/api/projects/$id"(controller: "project", action: "show", method:"GET")
+
+        "/api/projects"(controller: "project", action: "save", method:"POST")
+        "/api/projects/$id"(controller: "project", action: "update", method:"PUT")
+
+        "/api/projects/$id"(controller: "project", action: "delete", method:"DELETE")
+
         "/api/users"(resources: 'user')
         
         "/"(controller: 'application', action: 'index')
