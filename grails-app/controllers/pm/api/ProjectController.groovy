@@ -32,8 +32,9 @@ class ProjectController {
     }
  
     def save(Project project) {
-        projectService.save(project)
-        respond Project.list()
+        def proc = projectService
+        proc.save(project)
+        respond proc
     }
  
     def delete(Long id) {
