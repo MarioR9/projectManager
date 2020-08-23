@@ -15,4 +15,7 @@ project manager is a tool that will help developer collaborate and plan projects
 * remote current projects
 
 
-*** Current Project User Test
+*** Current Project User Test Mario R.
+
+- Future fetures => account creation and authentication. 
+- Project collaboration 
